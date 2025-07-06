@@ -1,0 +1,40 @@
+in msys2
+
+pacman -Syu
+
+close terminal when done and re-open
+
+do pacman -Syu one more time after re-opening to complete
+
+pacman -S mingw-w64-x86_64-gtk4
+pacman -S mingw-w64-x86_64-gcc
+pacman -S mingw-w64-x86_64-pkg-config
+
+or as one command
+
+pacman -S mingw-w64-x86_64-gtk4 mingw-w64-x86_64-gcc mingw-w64-x86_64-pkg-config
+
+for vs code c\c++ extension include path
+
+C:/msys64/mingw64/include/**
+C:/msys64/mingw64/lib/*/include/**
+
+
+
+
+TROUBLESHOOTING SECTION
+
+added to path
+
+C:\msys64\mingw64\bin
+C:\msys64\usr\bin
+
+environment variable
+
+name : PKG_CONFIG_PATH
+value : C:\msys64\mingw64\lib\pkgconfig
+
+to get the dll files that need to go with the exe
+when sharing to someone else (all in one folder)
+
+ldd app.exe (or whatever your exe is called)
